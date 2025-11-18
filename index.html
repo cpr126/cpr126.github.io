@@ -292,7 +292,7 @@
             // Update Problem TNOs output (Section 3)
             const uniqueProblemTNOs = [...problemTNOsSet].join('\n');
             outputProblemEl.value = uniqueProblemTNOs;
-            updateButton(copyProblemBtn, 'Problems', problemTNOsSet.size, 'red-600');
+            updateButton(copyProblemBtn, 'Problem TNOs', problemTNOsSet.size, 'red-600');
 
             // Update MI Packages output (Section 4)
             const uniqueMiPackages = [...new Set(miPackages)].join('\n');
@@ -322,8 +322,8 @@
             if (fullManifestTNOs.size === 0) {
                 outputRemainingEl.value = 'Paste manifest data (Section 1) to begin tracking.';
                 outputScannedProblemEl.value = '';
-                updateButton(copyRemainingBtn, 'Remaining', 0, 'green-600');
-                updateButton(copyScannedProblemBtn, 'Scanned Problems', 0, 'red-700');
+                updateButton(copyRemainingBtn, 'Remaining TNOs', 0, 'green-600');
+                updateButton(copyScannedProblemBtn, 'Scanned Problem TNOs', 0, 'red-700');
                 return;
             }
 
@@ -355,11 +355,11 @@
                 outputRemainingEl.classList.add('text-yellow-300');
                 outputRemainingEl.classList.remove('text-green-500');
             }
-            updateButton(copyRemainingBtn, 'Remaining', remainingTNOs.length, 'green-600');
+            updateButton(copyRemainingBtn, 'Remaining TNOs', remainingTNOs.length, 'green-600');
             
             // --- Update 5c (Scanned Problems) ---
             outputScannedProblemEl.value = scannedProblemTNOs.join('\n');
-            updateButton(copyScannedProblemBtn, 'Scanned Problems', scannedProblemTNOs.length, 'red-700');
+            updateButton(copyScannedProblemBtn, 'Scanned Problem TNOs', scannedProblemTNOs.length, 'red-700');
         }
 
 
